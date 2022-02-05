@@ -1,0 +1,11 @@
+- 
+  name: Apache Installation
+  hosts: Ansible-Client
+  tasks:
+  - yum:
+      name: httpd
+      state: present
+  - service:
+      name: httpd
+      state: started
+      enabled: yes
